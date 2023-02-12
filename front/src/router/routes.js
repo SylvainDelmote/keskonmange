@@ -5,7 +5,7 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/plats/:id', component: () => import('../components/PlatsDetail.vue') },
+      { path: '/plats/:id', component: () => import('../pages/DetailsPlat.vue') },
       { path: '/edit', component: () => import('../pages/EditerPlat.vue') },
       { path: '/plats', component: () => import('../pages/AfficherPlat.vue') },
       { path: '/add', component: () => import('../pages/AjouterPlat.vue') },

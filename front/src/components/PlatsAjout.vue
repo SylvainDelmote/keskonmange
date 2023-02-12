@@ -1,5 +1,6 @@
 <template>
-  <div class="q-pa-md" style="max-width: 400px">
+  <q-card class="shadow-13" q-pa-lg>
+  <div class="q-pa-lg" style="width: 600px">
     <q-form
       @submit="onSubmit"
       @reset="onReset"
@@ -25,7 +26,11 @@
         filled
         v-model.trim="payload.recette"
         label="recette"
-
+      />
+      <q-input
+        filled
+        v-model.trim="payload.ingredients[0]"
+        label="ingredients"
       />
 
       <q-checkbox v-model="payload.healthy" left-label label="Healthy ? " />
@@ -36,6 +41,7 @@
       </div>
     </q-form>
   </div>
+  </q-card>
 </template>
 
 <script setup>
@@ -49,6 +55,7 @@ const payload = reactive({
   nom: '',
   image: '',
   recette: '',
+  ingredients: [],
   healthy: false
 })
 const succes = {
@@ -82,6 +89,7 @@ function onReset () {
   payload.nom = null
   payload.image = null
   payload.recette = null
+  payload.ingredients = null
 }
 
 </script>

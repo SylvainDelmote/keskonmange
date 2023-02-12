@@ -9,9 +9,9 @@ console.log(props.plats)
 <template>
 <q-page class='q-pa-lg'>
   <h2> Plats </h2>
-  <div class="flex wrap q-gutter-sm justify-center">
-    <div v-for="({id,nom,image,healthy, ...more}) in props.plats" :key='id'>
-      <RouterLink :to="`/plats/:${id}`">
+  <div class="flex wrap q-gutter-lg justify-center">
+    <div v-for="({id,nom,image,healthy, ...more}) in props.plats" :key='id' >
+      <RouterLink :to="`/plats/${id}`">
         <BasicCard  v-bind="{ id, nom, image,more,healthy }"/>
       </RouterLink>
       </div>
@@ -21,4 +21,5 @@ console.log(props.plats)
 </template>
 
 <style scoped>
+
 </style>

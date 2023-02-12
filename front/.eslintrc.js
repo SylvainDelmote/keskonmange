@@ -5,7 +5,7 @@ module.exports = {
   root: true,
 
   parserOptions: {
-    ecmaVersion: '2021', // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: '2022' // Allows for the parsing of modern ECMAScript features
   },
 
   env: {
@@ -27,14 +27,14 @@ module.exports = {
     // 'plugin:vue/vue3-recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
 
     'standard'
-    
+
   ],
 
   plugins: [
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
-    'vue',
-    
+    'vue'
+
   ],
 
   globals: {
@@ -52,13 +52,14 @@ module.exports = {
 
   // add your custom rules here
   rules: {
-    
+
     // allow async-await
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 'off',
     'one-var': 'off',
     'no-void': 'off',
+    'no-unused-vars': 'off',
     'multiline-ternary': 'off',
 
     'import/first': 'off',
@@ -69,7 +70,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
-    
+
     'prefer-promise-reject-errors': 'off',
 
     // allow debugger during development only
